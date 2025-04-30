@@ -1,0 +1,53 @@
+body {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    margin: 0;
+    background-color: #fff8f0;
+    color: #333;
+}
+
+header {
+    background-color: #a0522d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hero {
+    background-image: url('banner.jpg'); /* ممكن تغيّري الصورة */
+    background-size: cover;
+    padding: 80px;
+    text-align: center;
+    color: #fff;
+    background-color: #444;
+}
+
+.btn {
+    background-color: #d2691e;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+footer {
+    background-color: #a0522d;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
