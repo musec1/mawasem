@@ -94,7 +94,7 @@ header {
     align-items: center;
     justify-content: center;
     min-height: 70vh;
-    position: relative; /* For the pseudo-element */
+    position: relative;
     overflow: hidden;
 }
 
@@ -105,11 +105,11 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('hero-bg.jpg'); /* Replace with your image */
+    background-image: url('hero-bg.jpg');
     background-size: cover;
     background-position: center;
-    filter: blur(5px); /* Adjust blur as needed */
-    opacity: 0.4; /* Adjust opacity for desired effect */
+    filter: blur(5px);
+    opacity: 0.4;
     z-index: -1;
 }
 
@@ -295,9 +295,9 @@ header {
     transition: background-color 0.3s ease, transform 0.2s ease;
     margin-top: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed; /* Make it fixed */
-    bottom: 20px;      /* Position from the bottom */
-    left: 20px;        /* Position from the left */
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
     z-index: 1000;
 }
 
@@ -395,6 +395,30 @@ footer p{
    color: #386641;
 }
 
+.contact-form button {
+    background-color: #1dd1a1;
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #10ac84;
+    transform: translateY(-2px);
+}
+
+.contact-form button:active {
+   transform: translateY(0);
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
 .contact-form {
     margin-top: 40px;
     display: flex;
@@ -428,10 +452,6 @@ footer p{
     resize: vertical;
 }
 
-.contact-form button {
-    @extend .btn;
-    width: 100%;
-}
 
 
 /* ================== Product Listing Page ================== */
@@ -455,21 +475,55 @@ footer p{
     margin-top: 30px;
 }
 
-.product-listing .product-item{
-  @extend .product-item;
+.product-listing .product-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product-listing .product-item:hover{
-  @extend .product-item:hover;
+.product-listing .product-item:hover {
+     transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-.product-listing .product-item img{
-   @extend .product-item img;
+.product-listing .product-item img {
+    width: 100%;
+    display: block;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-.product-listing .product-item:hover img{
-  @extend .product-item:hover img
+.product-listing .product-item:hover img {
+     transform: scale(1.05);
 }
+
+.product-listing .product-item h3 {
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    color: #2d3436;
+}
+
+.product-listing .product-item .status {
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+}
+
+.product-listing .product-item .out-of-stock {
+    background-color: #e74c3c;
+}
+
+.product-listing .product-item .new {
+    background-color: #27ae60;
+}
+
 
 /* ================== Animations ================== */
 @keyframes fadeIn {
