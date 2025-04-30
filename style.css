@@ -5,10 +5,10 @@
 }
 
 body {
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Nunito', sans-serif; /* Modern Font */
     background-color: #f0f4f8;
     color: #2d3436;
-    line-height: 1.6;
+    line-height: 1.7; /* Improved line height for readability */
     direction: rtl;
 }
 
@@ -26,15 +26,15 @@ ul {
 header {
     background-color: #0a3d62;
     color: #fff;
-    padding: 20px 0;
+    padding: 25px 0; /* Increased padding */
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1); /* Slightly stronger shadow */
 }
 
 .container {
-    width: 90%;
+    width: 95%; /* Increased width for more modern look */
     max-width: 1200px;
     margin: auto;
     display: flex;
@@ -43,10 +43,11 @@ header {
 }
 
 .logo {
-    font-size: 28px;
+    font-size: 32px; /* Increased font size */
     font-weight: bold;
     color: #1dd1a1;
     transition: transform 0.2s ease;
+    letter-spacing: -0.02em;
 }
 
 .logo:hover {
@@ -55,23 +56,24 @@ header {
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 40px; /* Increased gap */
 }
 
 .nav-links a {
     color: #fff;
-    font-size: 16px;
+    font-size: 18px; /* Increased font size */
     position: relative;
+    padding-bottom: 5px; /* Added padding to make the underline look better */
 }
 
 .nav-links a::after {
     content: "";
     position: absolute;
     width: 0%;
-    height: 2px;
+    height: 3px; /* Increased height of underline */
     background-color: #1dd1a1;
     left: 0;
-    bottom: -4px;
+    bottom: -8px; /* Adjusted position of underline */
     transition: width 0.3s ease;
 }
 
@@ -88,12 +90,12 @@ header {
 .hero {
     background: linear-gradient(to right, #0a3d62, #1e6f93);
     color: #fff;
-    padding: 100px 20px;
+    padding: 120px 20px; /* Increased padding */
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 70vh;
+    min-height: 75vh; /* Increased height */
     position: relative;
     overflow: hidden;
 }
@@ -108,112 +110,119 @@ header {
     background-image: url('hero-bg.jpg');
     background-size: cover;
     background-position: center;
-    filter: blur(5px);
+    filter: blur(6px); /* Slightly more blur */
     opacity: 0.4;
     z-index: -1;
 }
 
 
 .hero-content {
-    max-width: 700px;
+    max-width: 800px; /* Increased max-width */
     animation: fadeIn 1.5s ease forwards, slideIn 1s ease-out;
 }
 
 .hero h2 {
-    font-size: 38px;
-    margin-bottom: 20px;
+    font-size: 48px; /* Increased font size */
+    margin-bottom: 25px; /* Increased margin */
     color: #fff;
+    letter-spacing: -0.02em;
 }
 
 .hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
+    font-size: 22px; /* Increased font size */
+    margin-bottom: 40px; /* Increased margin */
     color: #e0f7fa;
+    line-height: 1.8;
 }
 
 .btn {
     background-color: #1dd1a1;
     color: #ffffff;
-    padding: 12px 30px;
-    border-radius: 6px;
-    font-size: 18px;
+    padding: 15px 35px; /* Increased padding */
+    border-radius: 8px; /* Slightly more rounded */
+    font-size: 20px; /* Increased font size */
     font-weight: bold;
     display: inline-block;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Increased shadow */
 }
 
 .btn:hover {
     background-color: #10ac84;
-    transform: translateY(-2px);
+    transform: translateY(-4px); /* Increased transform */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
 }
 
 .btn:active{
-   transform: translateY(0);
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* ================== New Arrivals Section ================== */
 .new-arrivals {
-    padding: 60px 20px;
+    padding: 80px 20px;
     background-color: #f9f9f9;
     text-align: center;
 }
 
 .new-arrivals h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
+    font-size: 36px;
+    margin-bottom: 40px; /* Increased margin */
     color: #0a3d62;
+    letter-spacing: -0.02em;
 }
 
 
 .new-arrivals .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increased min-width */
     gap: 40px;
-    margin-top: 30px;
+    margin-top: 40px; /* Increased margin */
 }
 
 .product-item {
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 12px; /* Slightly more rounded */
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* Increased shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    transform: translateY(-6px); /* Increased transform */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Increased shadow on hover */
 }
 
 
 .product-item img {
     width: 100%;
     display: block;
-    height: 300px;
+    height: 350px; /* Increased height */
     object-fit: cover;
     transition: transform 0.3s ease;
+    border-radius: 12px 12px 0 0; /* Ensure rounded corners on top */
 }
 
 .product-item:hover img{
-  transform: scale(1.05);
+    transform: scale(1.03); /* Subtle scale on image hover */
 }
 
 .product-item h3 {
-    padding: 15px;
-    font-size: 20px;
+    padding: 20px; /* Increased padding */
+    font-size: 22px; /* Increased font size */
     text-align: center;
     color: #2d3436;
+    font-weight: 600; /* Make heading slightly bolder */
 }
 
 .status {
     display: block;
-    padding: 10px 15px;
+    padding: 12px 15px;
     text-align: center;
     font-weight: bold;
     color: #fff;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 12px 12px; /* Ensure rounded corners on bottom */
+    font-size: 16px;
 }
 
 .out-of-stock {
@@ -226,58 +235,60 @@ header {
 
 /* ================== Categories Section ================== */
 .categories {
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
     background-color: #f0f4f8;
 }
 
 .categories h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
+    font-size: 36px;
+    margin-bottom: 40px;
     color: #0a3d62;
+    letter-spacing: -0.02em;
 }
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increased min-width */
     gap: 40px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .category-card {
     display: block;
     text-decoration: none;
     color: inherit;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #fff;
 }
 
 .category-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .category-card img {
     width: 100%;
-    height: 300px;
+    height: 350px;
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
+    border-radius: 12px 12px 0 0;
 }
 
 .category-card:hover img {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 
 .category-card h3 {
-    padding: 15px;
+    padding: 20px;
     background-color: #fff;
     text-align: center;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     color: #2d3436;
 }
@@ -288,33 +299,34 @@ header {
     align-items: center;
     background-color: #25d366;
     color: #fff;
-    padding: 12px 25px;
-    border-radius: 8px;
+    padding: 15px 30px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 25px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
-    bottom: 20px;
-    left: 20px;
+    bottom: 25px;
+    left: 25px;
     z-index: 1000;
 }
 
 .whatsapp-button:hover {
     background-color: #128c7e;
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 .whatsapp-button:active {
-   transform: translateY(0);
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .whatsapp-button img {
-    width: 24px;
-    height: 24px;
-    margin-left: 10px;
+    width: 28px;
+    height: 28px;
+    margin-left: 12px;
 }
 
 /* ================== Footer ================== */
@@ -322,100 +334,103 @@ footer {
     background-color: #0a3d62;
     color: #dfe6e9;
     text-align: center;
-    padding: 25px 0;
-    font-size: 16px;
-    margin-top: 60px;
+    padding: 30px 0;
+    font-size: 18px;
+    margin-top: 80px;
 }
 
 footer p{
-  opacity: 0.8;
+    opacity: 0.8;
 }
 
 /* ================== About Us Page ================== */
 .about-us {
-    padding: 80px 20px;
+    padding: 100px 20px;
     text-align: center;
     background-color: #f9f9f9;
-    min-height: calc(100vh - 200px);
+    min-height: calc(100vh - 250px);
 }
 
 .about-us h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
+    font-size: 42px;
+    margin-bottom: 35px;
     color: #0a3d62;
+    letter-spacing: -0.02em;
 }
 
 .about-us p {
-    font-size: 18px;
-    line-height: 1.8;
+    font-size: 20px;
+    line-height: 1.9;
     color: #2d3436;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: justify;
 }
 
 .about-us .container{
-  max-width: 80%;
+    max-width: 80%;
 }
 
 
 /* ================== Contact Page ================== */
 .contact-page {
-    padding: 80px 20px;
+    padding: 100px 20px;
     text-align: center;
     background-color: #f0f4f8;
-    min-height: calc(100vh - 200px);
+    min-height: calc(100vh - 250px);
 }
 
 
 .contact-page h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
+    font-size: 42px;
+    margin-bottom: 35px;
     color: #0a3d62;
+    letter-spacing: -0.02em;
 }
 
 .contact-page p {
-    font-size: 18px;
-    line-height: 1.8;
+    font-size: 20px;
+    line-height: 1.9;
     color: #2d3436;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .contact-info {
-    margin-top: 30px;
-    font-size: 20px;
+    margin-top: 40px;
+    font-size: 22px;
     color: #1e3d5b;
 }
 
 .contact-info a{
-  color: #1e3d5b;
-  font-weight: bold;
+    color: #1e3d5b;
+    font-weight: bold;
 }
 
 .contact-info a:hover{
-   color: #386641;
+    color: #386641;
 }
 
 .contact-form button {
     background-color: #1dd1a1;
     color: #ffffff;
-    padding: 12px 30px;
-    border-radius: 6px;
-    font-size: 18px;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-size: 20px;
     font-weight: bold;
     display: inline-block;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
 }
 
 .contact-form button:hover {
     background-color: #10ac84;
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 .contact-form button:active {
-   transform: translateY(0);
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -424,7 +439,7 @@ footer p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
     width: 100%;
     max-width: 500px;
     margin: 40px auto;
@@ -433,11 +448,11 @@ footer p{
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 12px 15px;
+    padding: 15px 20px;
     border: 1px solid #ddd;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 18px;
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Nunito', sans-serif;
     transition: border-color 0.3s ease;
 }
 
@@ -445,10 +460,11 @@ footer p{
 .contact-form textarea:focus {
     outline: none;
     border-color: #1dd1a1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form textarea {
-    height: 150px;
+    height: 180px;
     resize: vertical;
 }
 
@@ -458,62 +474,66 @@ footer p{
 .product-listing {
     padding: 80px 20px;
     background-color: #f9f9f9;
-    min-height: calc(100vh - 200px);
+    min-height: calc(100vh - 250px);
 }
 
 .product-listing h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
+    font-size: 42px;
+    margin-bottom: 40px;
     color: #0a3d62;
     text-align: center;
+    letter-spacing: -0.02em;
 }
 
 .product-listing .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .product-listing .product-item {
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-listing .product-item:hover {
-     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .product-listing .product-item img {
     width: 100%;
     display: block;
-    height: 300px;
+    height: 350px;
     object-fit: cover;
     transition: transform 0.3s ease;
+    border-radius: 12px 12px 0 0;
 }
 
 .product-listing .product-item:hover img {
-     transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .product-listing .product-item h3 {
-    padding: 15px;
-    font-size: 20px;
+    padding: 20px;
+    font-size: 22px;
     text-align: center;
     color: #2d3436;
+    font-weight: 600;
 }
 
 .product-listing .product-item .status {
     display: block;
-    padding: 10px 15px;
+    padding: 12px 15px;
     text-align: center;
     font-weight: bold;
     color: #fff;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 12px 12px;
+    font-size: 16px;
 }
 
 .product-listing .product-item .out-of-stock {
@@ -548,6 +568,16 @@ footer p{
 
 
 /* ================== Responsive Adjustments ================== */
+@media (max-width: 1200px) {
+    .container {
+        width: 98%;
+    }
+     .nav-links {
+        gap: 30px;
+    }
+}
+
+
 @media (max-width: 992px) {
     .container {
         width: 95%;
@@ -558,11 +588,11 @@ footer p{
     }
 
     .hero h2 {
-        font-size: 32px;
+        font-size: 40px;
     }
 
     .hero p {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
@@ -579,11 +609,34 @@ footer p{
     }
 
     .logo {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 
     .hero {
-        padding: 80px 20px;
+        padding: 100px 20px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+    .new-arrivals .product-grid,
+    .product-listing .product-grid,
+    .categories .category-grid{
+       grid-template-columns: 1fr;
+    }
+    .whatsapp-button{
+      bottom: 20px;
+      left: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 80px 15px;
     }
 
     .hero h2 {
@@ -593,35 +646,15 @@ footer p{
     .hero p {
         font-size: 16px;
     }
-    .new-arrivals .product-grid,
-    .product-listing .product-grid,
-    .categories .category-grid{
-       grid-template-columns: 1fr;
-    }
-    .whatsapp-button{
-      bottom: 15px;
-      left: 15px;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero {
-        padding: 60px 15px;
-    }
-
-    .hero h2 {
-        font-size: 24px;
-    }
-
-    .hero p {
-        font-size: 14px;
-    }
 
     .btn {
-        font-size: 16px;
-        padding: 10px 20px;
+        font-size: 18px;
+        padding: 12px 30px;
     }
     footer{
-      font-size: 14px;
+      font-size: 16px;
+    }
+    .logo{
+      font-size: 28px;
     }
 }
