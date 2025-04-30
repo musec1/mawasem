@@ -1,135 +1,134 @@
-body {
-    font-family: 'Cairo', sans-serif;
-    direction: rtl;
+* {
     margin: 0;
-    background-color: #fff8f0;
-    color: #333;
-    overflow-x: hidden;
-}
-
-header {
-    background-color: #a0522d;
-    color: white;
-    padding: 30px 20px;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-}
-
-/* أنماط التنقل */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
     padding: 0;
-    margin-top: 20px;
-}
-
-nav a {
-    color: white;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+    line-height: 1.6;
+  }
+  
+  a {
     text-decoration: none;
-    font-size: 18px;
-    transition: all 0.3s ease;
-}
-
-nav a:hover {
-    color: #d2691e;
-    transform: translateY(-5px);
-}
-
-/* قسم البطل (Hero Section) */
-.hero {
-    background-image: url('hero-image.jpg'); /* تأكد من تحديث رابط الصورة */
-    background-size: cover;
-    background-position: center;
+    color: inherit;
+    transition: 0.3s ease;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  header {
+    background-color: #111;
+    color: #fff;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #d4af37; /* لون ذهبي راقٍ */
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    font-size: 16px;
+    position: relative;
+  }
+  
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #d4af37;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  .hero {
+    background: linear-gradient(to right, #111, #333);
+    color: #fff;
     padding: 100px 20px;
     text-align: center;
-    color: #fff;
-    position: relative;
-    z-index: 1;
-    opacity: 0.9;
-}
-
-.hero h2, .hero p {
-    animation: fadeInUp 1.5s ease-out forwards;
-}
-
-.hero p {
-    font-size: 22px;
-    margin-top: 15px;
-    opacity: 0;
-    animation: fadeInUp 2s ease-out forwards;
-    animation-delay: 0.5s;
-}
-
-.btn {
-    background-color: #d2691e;
-    padding: 15px 30px;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+  }
+  
+  .hero-content {
+    max-width: 700px;
+    animation: fadeIn 1.5s ease forwards;
+  }
+  
+  .hero h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  
+  .hero p {
     font-size: 20px;
-    margin-top: 20px;
+    margin-bottom: 25px;
+    color: #ccc;
+  }
+  
+  .btn {
+    background-color: #d4af37;
+    color: #111;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 18px;
     display: inline-block;
-    opacity: 0;
-    animation: fadeInUp 1.5s ease-out forwards;
-    animation-delay: 1s;
-}
-
-.btn:hover {
-    background-color: #f4a300;
-    transform: translateY(-5px);
-}
-
-/* تأثيرات الفوتر */
-footer {
-    background-color: #a0522d;
-    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #c49c27;
+  }
+  
+  footer {
+    background-color: #111;
+    color: #aaa;
     text-align: center;
-    padding: 10px;
-}
-
-/* الأنماط لتأثيرات الأنميشن */
-@keyframes fadeInUp {
+    padding: 20px 0;
+    font-size: 14px;
+  }
+  
+  @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: translateY(30px);
+      opacity: 0;
+      transform: translateY(40px);
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
     }
-}
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-.fadeIn {
-    animation: fadeInUp 2s ease-out forwards;
-}
-
-.slideInRight {
-    animation: slideInRight 1s ease-out forwards;
-}
-
-.bounce {
-    animation: bounce 1s ease infinite;
-}
+  }
+  
