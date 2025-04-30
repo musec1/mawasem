@@ -4,50 +4,132 @@ body {
     margin: 0;
     background-color: #fff8f0;
     color: #333;
+    overflow-x: hidden;
 }
 
 header {
     background-color: #a0522d;
     color: white;
-    padding: 20px;
+    padding: 30px 20px;
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
+/* أنماط التنقل */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
     padding: 0;
+    margin-top: 20px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    transition: all 0.3s ease;
 }
 
+nav a:hover {
+    color: #d2691e;
+    transform: translateY(-5px);
+}
+
+/* قسم البطل (Hero Section) */
 .hero {
-    background-image: url('.jpg');
+    background-image: url('hero-image.jpg'); /* تأكد من تحديث رابط الصورة */
     background-size: cover;
-    padding: 80px;
+    background-position: center;
+    padding: 100px 20px;
     text-align: center;
     color: #fff;
-    background-color: #444;
+    position: relative;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.hero h2, .hero p {
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-top: 15px;
+    opacity: 0;
+    animation: fadeInUp 2s ease-out forwards;
+    animation-delay: 0.5s;
 }
 
 .btn {
     background-color: #d2691e;
-    padding: 10px 20px;
+    padding: 15px 30px;
     color: white;
     text-decoration: none;
-    border-radius: 10px;
-    font-size: 18px;
+    border-radius: 30px;
+    font-size: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 1s;
 }
 
+.btn:hover {
+    background-color: #f4a300;
+    transform: translateY(-5px);
+}
+
+/* تأثيرات الفوتر */
 footer {
     background-color: #a0522d;
     color: white;
     text-align: center;
     padding: 10px;
+}
+
+/* الأنماط لتأثيرات الأنميشن */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.fadeIn {
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+.slideInRight {
+    animation: slideInRight 1s ease-out forwards;
+}
+
+.bounce {
+    animation: bounce 1s ease infinite;
 }
